@@ -1,0 +1,48 @@
+
+======================================================================
+1. LOADING DATASET
+======================================================================
+Loaded dataset with shape: (900, 22)
+
+======================================================================
+2. PREPROCESSING & FEATURE SELECTION
+======================================================================
+Regressor Features (9)
+Classifier Features (10) -> Includes Deviation %
+
+======================================================================
+3. TRAIN / TEST SPLIT
+======================================================================
+Train size: 720 samples
+Test size : 180 samples
+
+======================================================================
+4. RANDOM FOREST REGRESSOR
+======================================================================
+Mean Absolute Error (MAE) : 0.5078
+Root Mean Squared Error   : 0.6818
+R² Score                  : 0.9765
+
+======================================================================
+5. RANDOM FOREST CLASSIFIER
+======================================================================
+Accuracy: 0.9944
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+         Invalid       1.00      1.00      1.00        18
+Minor Difference       1.00      0.97      0.98        31
+           Valid       0.99      1.00      1.00       131
+
+        accuracy                           0.99       180
+       macro avg       1.00      0.99      0.99       180
+    weighted avg       0.99      0.99      0.99       180
+
+
+======================================================================
+✅ MODEL TRAINING COMPLETE
+======================================================================
+📦 Models saved to     : C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\models
+📄 Report saved to     : C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\reports\model_results\model_evaluation.txt
+🖼️  Graphs saved to     : C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\graphs\model_graphs

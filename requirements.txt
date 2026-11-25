@@ -1,0 +1,23 @@
+# ---------- Core ----------
+streamlit==1.36.0
+numpy==1.26.4
+pandas==2.2.2
+pyarrow<19          # newer pyarrow needs NumPy 2 and breaks numpy==1.26.4
+
+# ---------- Image processing ----------
+opencv-python==4.10.0.84
+Pillow==10.3.0
+
+# ---------- OCR ----------
+pytesseract==0.3.13
+
+# ---------- Machine learning ----------
+scikit-learn==1.5.1
+joblib==1.4.2
+
+# ---------- Visualization ----------
+matplotlib==3.9.0
+plotly==5.22.0
+
+# ---------- PDF generation ----------
+fpdf2==2.7.9

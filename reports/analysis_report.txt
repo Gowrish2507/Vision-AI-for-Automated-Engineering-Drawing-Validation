@@ -1,0 +1,186 @@
+
+======================================================================
+1. LOADING DATASET
+======================================================================
+Dataset path : C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\dataset\civil_estimation_dataset.csv
+✅ Loaded successfully.
+Shape        : (900, 22)  (rows, columns)
+Columns      : ['Drawing_ID', 'Component_Type', 'Length', 'Width', 'Height', 'Area', 'Quantity', 'Floor_Area', 'Detected_Length', 'Detected_Area', 'Detected_Quantity', 'Estimated_Length', 'Estimated_Area', 'Estimated_Quantity', 'Estimated_Cost', 'Actual_Length', 'Actual_Area', 'Actual_Quantity', 'Actual_Cost', 'Tolerance_Percentage', 'Deviation_Percentage', 'Validation_Status']
+
+======================================================================
+2. BASIC INFORMATION
+======================================================================
+
+--- dtypes ---
+Drawing_ID               object
+Component_Type           object
+Length                  float64
+Width                   float64
+Height                  float64
+Area                    float64
+Quantity                  int64
+Floor_Area              float64
+Detected_Length         float64
+Detected_Area           float64
+Detected_Quantity         int64
+Estimated_Length        float64
+Estimated_Area          float64
+Estimated_Quantity        int64
+Estimated_Cost          float64
+Actual_Length           float64
+Actual_Area             float64
+Actual_Quantity           int64
+Actual_Cost               int64
+Tolerance_Percentage      int64
+Deviation_Percentage    float64
+Validation_Status        object
+dtype: object
+
+--- first 5 rows ---
+  Drawing_ID Component_Type  Length  Width  ...  Actual_Cost  Tolerance_Percentage  Deviation_Percentage  Validation_Status
+0   DRW_0012     Floor Area   56.57  24.71  ...          850                    10                  1.76              Valid
+1   DRW_0138           Room   15.57  14.36  ...        45000                     5                  2.06              Valid
+2   DRW_0039         Column    1.03   0.79  ...        38500                    10                  2.47              Valid
+3   DRW_0099           Wall   42.85   0.93  ...         7200                     5                 11.86            Invalid
+4   DRW_0007         Column    1.04   1.48  ...        22000                     5                 11.84            Invalid
+
+[5 rows x 22 columns]
+
+--- last 5 rows ---
+    Drawing_ID Component_Type  Length  Width  ...  Actual_Cost  Tolerance_Percentage  Deviation_Percentage  Validation_Status
+895   DRW_0018     Floor Area   21.57  24.88  ...          850                    10                  0.90              Valid
+896   DRW_0046           Wall   69.08   0.70  ...         8550                     5                  7.26   Minor Difference
+897   DRW_0144         Window    4.63   4.78  ...        15000                    10                  5.24              Valid
+898   DRW_0073         Column    0.95   0.82  ...        33000                    15                  9.21              Valid
+899   DRW_0018           Wall  111.24   0.61  ...         4950                     5                 14.69            Invalid
+
+[5 rows x 22 columns]
+
+======================================================================
+3. MISSING VALUES & DUPLICATES
+======================================================================
+
+--- missing values ---
+None ✅
+
+Duplicate rows : 0
+
+======================================================================
+4. SUMMARY STATISTICS
+======================================================================
+                      count unique         top freq          mean  ...     min       25%       50%         75%        max
+Drawing_ID              900    150    DRW_0012    6           NaN  ...     NaN       NaN       NaN         NaN        NaN
+Component_Type          900      6  Floor Area  150           NaN  ...     NaN       NaN       NaN         NaN        NaN
+Length                900.0    NaN         NaN  NaN     22.647656  ...    0.75    3.4175     7.015      34.565     119.95
+Width                 900.0    NaN         NaN  NaN     11.178922  ...     0.5      1.13     5.745     14.0825      59.78
+Height                900.0    NaN         NaN  NaN      7.079611  ...     0.0      4.08      8.25        10.5       12.0
+Area                  900.0    NaN         NaN  NaN      318.3708  ...    0.61    17.445     28.17      185.25    3142.02
+Quantity              900.0    NaN         NaN  NaN      6.176667  ...     1.0       2.0       5.0         9.0       19.0
+Floor_Area            900.0    NaN         NaN  NaN   1534.955122  ...  600.76  1059.405   1537.77     2017.73    2498.99
+Detected_Length       900.0    NaN         NaN  NaN     22.628444  ...    0.73      3.41     7.125       34.77     120.09
+Detected_Area         900.0    NaN         NaN  NaN    317.904311  ...    0.61    17.435    28.145    184.6425    3133.05
+Detected_Quantity     900.0    NaN         NaN  NaN      6.223333  ...     1.0       2.0       5.0         9.0       20.0
+Estimated_Length      900.0    NaN         NaN  NaN     22.601078  ...    0.68      3.36      7.05     34.3225     123.66
+Estimated_Area        900.0    NaN         NaN  NaN    319.739878  ...    0.55   17.2925     28.76      193.97    3404.49
+Estimated_Quantity    900.0    NaN         NaN  NaN      6.321111  ...     1.0       2.0       5.0         9.0       21.0
+Estimated_Cost        900.0    NaN         NaN  NaN  22859.325133  ...   767.3   4558.69  15591.59  31792.4525  111046.76
+Actual_Length         900.0    NaN         NaN  NaN     22.645133  ...    0.76      3.41      7.04       34.47     119.64
+Actual_Area           900.0    NaN         NaN  NaN      318.6043  ...    0.61   17.4125    28.155     185.335    3126.23
+Actual_Quantity       900.0    NaN         NaN  NaN      6.176667  ...     1.0       2.0       5.0         9.0       19.0
+Actual_Cost           900.0    NaN         NaN  NaN  22725.666667  ...   850.0    5400.0   17500.0     31500.0    82500.0
+Tolerance_Percentage  900.0    NaN         NaN  NaN     12.261111  ...     5.0       5.0      10.0        15.0       20.0
+Deviation_Percentage  900.0    NaN         NaN  NaN      7.715456  ...     0.0      3.73      7.53      11.455       19.7
+Validation_Status       900      3       Valid  655           NaN  ...     NaN       NaN       NaN         NaN        NaN
+
+[22 rows x 11 columns]
+
+✅ Saved summary stats → C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\reports\summary_stats.csv
+
+======================================================================
+5. CATEGORICAL DISTRIBUTIONS
+======================================================================
+
+--- Component_Type counts ---
+Component_Type
+Floor Area    150
+Room          150
+Column        150
+Wall          150
+Window        150
+Door          150
+Name: count, dtype: int64
+
+--- Validation_Status counts ---
+Validation_Status
+Valid               655
+Minor Difference    157
+Invalid              88
+Name: count, dtype: int64
+✅ Saved status distribution → C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\reports\validation_status_distribution.csv
+
+======================================================================
+6. CORRELATION MATRIX
+======================================================================
+                      Length  Width  Height  ...  Actual_Cost  Tolerance_Percentage  Deviation_Percentage
+Length                 1.000  0.158   0.007  ...       -0.495                -0.100                -0.006
+Width                  0.158  1.000  -0.686  ...       -0.312                -0.032                -0.021
+Height                 0.007 -0.686   1.000  ...        0.518                 0.041                -0.015
+Area                   0.312  0.929  -0.681  ...       -0.382                -0.049                -0.003
+Quantity               0.180 -0.627   0.471  ...        0.273                 0.012                 0.017
+Floor_Area            -0.026 -0.033  -0.016  ...       -0.038                -0.037                -0.020
+Detected_Length        1.000  0.157   0.007  ...       -0.495                -0.099                -0.005
+Detected_Area          0.313  0.928  -0.681  ...       -0.382                -0.049                -0.003
+Detected_Quantity      0.186 -0.601   0.452  ...        0.260                 0.009                 0.009
+Estimated_Length       0.994  0.165   0.001  ...       -0.495                -0.100                -0.006
+Estimated_Area         0.310  0.924  -0.676  ...       -0.379                -0.048                -0.000
+Estimated_Quantity     0.199 -0.575   0.424  ...        0.228                 0.011                 0.010
+Estimated_Cost        -0.469 -0.292   0.487  ...        0.918                 0.070                -0.027
+Actual_Length          1.000  0.158   0.007  ...       -0.495                -0.100                -0.007
+Actual_Area            0.312  0.929  -0.681  ...       -0.382                -0.049                -0.003
+Actual_Quantity        0.180 -0.627   0.471  ...        0.273                 0.012                 0.017
+Actual_Cost           -0.495 -0.312   0.518  ...        1.000                 0.082                -0.022
+Tolerance_Percentage  -0.100 -0.032   0.041  ...        0.082                 1.000                -0.006
+Deviation_Percentage  -0.006 -0.021  -0.015  ...       -0.022                -0.006                 1.000
+
+[19 rows x 19 columns]
+
+✅ Saved correlation matrix → C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\reports\correlation_matrix.csv
+
+======================================================================
+7. GENERATING GRAPHS
+======================================================================
+✅ 01_numeric_distributions.png
+✅ 02_component_type_count.png
+✅ 03_validation_status_count.png
+✅ 04_correlation_heatmap.png
+✅ 05_boxplots_by_component.png
+✅ 06_deviation_vs_tolerance.png
+✅ 07_area_comparison.png
+✅ 08_quantity_comparison.png
+✅ 09_cost_comparison.png
+✅ 10_deviation_distribution.png
+✅ 11_floor_area_vs_deviation.png
+✅ 12_status_by_component.png
+✅ 13_pairplot_key_features.png
+
+======================================================================
+8. KEY INSIGHTS
+======================================================================
+• Valid: 72.78% of records
+• Minor Difference: 17.44% of records
+• Invalid: 9.78% of records
+• Mean deviation: 7.72%
+• Max deviation : 19.70%
+• Min deviation : 0.00%
+• Most common component: Floor Area
+• Average cost diff (Est - Act): 133.66
+
+======================================================================
+✅ ANALYSIS COMPLETE
+======================================================================
+📄 Text report     → C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\reports\analysis_report.txt
+📄 Summary stats   → C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\reports\summary_stats.csv
+📄 Correlation     → C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\reports\correlation_matrix.csv
+📄 Status dist.    → C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\reports\validation_status_distribution.csv
+🖼️  Graphs folder   → C:\Users\CRESCENT DEV\Desktop\ENGDrawing Validation\graphs
+🖼️  Total graphs    → 13
